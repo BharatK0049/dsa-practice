@@ -21,8 +21,9 @@ Violating any rule invalidates the problem.
 
 ## Repository Structure
 
-dsa-practice/
-hey
+sfgsfg
+sdgsfgs
+sfgsfg
 
 ## Problem Workflow
 
