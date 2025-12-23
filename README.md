@@ -21,12 +21,17 @@ Violating any rule invalidates the problem.
 
 ## Repository Structure
 
-sfgsfg
+dsa-practice/
 
-sdgsfgs
+├── problems/
 
-sfgsfg
+├── patterns/
 
+├── logs/
+
+├── templates/
+
+└── README.md
 ## Problem Workflow
 
 For every problem:
