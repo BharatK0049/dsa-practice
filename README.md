@@ -22,13 +22,7 @@ Violating any rule invalidates the problem.
 ## Repository Structure
 
 dsa-practice/
-│
-├── problems/ # Individual problem write-ups (markdown)
-├── patterns/ # Pattern summaries & mental checklists
-├── logs/ # Weekly reflection logs
-├── templates/ # Reusable templates
-└── README.md
-
+hey
 ## Problem Workflow
 
 For every problem:
