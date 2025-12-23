@@ -109,5 +109,3 @@ Raw problem count is irrelevant.
 - Think in patterns, not syntax
 
 ---
-
-_Last updated: <DATE>_
