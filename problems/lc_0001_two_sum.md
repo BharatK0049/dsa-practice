@@ -2,7 +2,7 @@
 LeetCode #1
 
 ## Pattern
-(What pattern does this belong to?)
+Existence via hashing
 
 ## Problem Restatement
 I am given an array of integers and a target number whose sum I should get from two numbers in the array. It is assumed that there is only one solution and the same number (if only in the same index) cannot be used twice.
