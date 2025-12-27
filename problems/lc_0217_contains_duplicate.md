@@ -5,10 +5,10 @@ LeetCode # 217
 (What pattern does this belong to?)
 
 ## Problem Restatement
-(Explain the problem in your own words)
+Given an array, check and see if there exists duplicate occurrences of a number. Return True if there exist duplicates and false if all numbers are unique.
 
 ## Initial Thoughts (Before Coding)
-- 
+- Sounds quite straightforward, just check if count(i) > 1 for every i. And if that works then go for true else false.
 - 
 - 
 
