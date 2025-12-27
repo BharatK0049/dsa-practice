@@ -2,7 +2,7 @@
 LeetCode # 217
 
 ## Pattern
-(What pattern does this belong to?)
+Existence Check via Hashing
 
 ## Problem Restatement
 Given an array, check and see if there exists duplicate occurrences of a number. Return True if there exist duplicates and false if all numbers are unique.
@@ -32,5 +32,8 @@ class Solution:
                 flag = True
             else:
                 seen.add(i)
-        
+```
+
+## Key Insight
+Instead of repeatedly scanning the array to count occurrences, I only need to know whether I’ve seen a value before, which can be tracked in constant time using a set.
         return flag
