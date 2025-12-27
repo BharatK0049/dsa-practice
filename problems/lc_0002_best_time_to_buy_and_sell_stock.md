@@ -23,8 +23,22 @@ I am given an array whose each element represents the value of a stock. I am sup
 
 ## Final Approach (In Words)
 - According to the Neetcode solution, I will take two pointers, one to track the buying price and the other, the selling. We use a single while loop to see if the right price is greater than the left one, and if so we calculate profit. Then we check and see if it's the max profit or not and we progress by moving the left to the right pointer and incrementing the right pointer by one.
+- Simply put, if my selling price is greater than my buying price, I calculate profit and check to see if it's the maximum profit or not. Otherwise, I move the buying to the current selling and increment the selling to the next price.
 
 ## Code
 ```python
-# write final code here
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+        buy = 0
+        sell = 1
+        while sell < len(prices):
+            if prices[sell] > prices[buy]:
+                if prices[sell] - prices[buy] > profit:
+                    profit = prices[sell] - prices[buy]    
+            else:
+                buy = sell
+            sell += 1
+        
+        return profit
 
