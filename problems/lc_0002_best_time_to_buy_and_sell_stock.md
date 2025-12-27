@@ -11,6 +11,7 @@ I am given an array whose each element represents the value of a stock. I am sup
 - I must move from left to right. For finding an element, there has to be at least a value to its right that must be greater than the given number. 
 - If the numbers are in descending order, there exists no profit. There must be some way to keep in mind the previous things kept in mind.
 - Reminds me a lot of the Coin change problem and most dynamic programming problems.
+- Attempt 1 worded out: I will first use a for loop and for every element, check if there exists a bigger value for a profit to exist and then store that profit in a variable, eventually I will see if the profit gets increased at the end of the iteration or not. If so, that's my final profit.
 
 ## Failed Attempts / Confusions
 - 
