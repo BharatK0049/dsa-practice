@@ -1,5 +1,5 @@
 # Problem: Best Time to Buy and Sell Stock
-LeetCode # 121
+LeetCode #121
 
 ## Pattern
 Two-Pointer
