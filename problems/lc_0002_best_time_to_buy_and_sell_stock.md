@@ -2,7 +2,7 @@
 LeetCode # 121
 
 ## Pattern
-(What pattern does this belong to?)
+Two-Pointer
 
 ## Problem Restatement
 I am given an array whose each element represents the value of a stock. I am supposed to find out the maximum profit from the day I buy to the day I sell in the future. return 0 if profit is not found.
