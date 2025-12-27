@@ -1,5 +1,5 @@
 # Problem: Contains Duplicate
-LeetCode # 217
+LeetCode #217
 
 ## Pattern
 Existence Check via Hashing
