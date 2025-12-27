@@ -33,9 +33,12 @@ class Solution:
         buy = 0
         sell = 1
         while sell < len(prices):
+            # Checking if sale is profitable
             if prices[sell] > prices[buy]:
+                # Checking if current profit is the max profit
                 if prices[sell] - prices[buy] > profit:
-                    profit = prices[sell] - prices[buy]    
+                    profit = prices[sell] - prices[buy]
+            # Moving the buy pointer to the current selling as it's lesser and moving the selling point to the next price    
             else:
                 buy = sell
             sell += 1
