@@ -14,7 +14,8 @@ I am given an array whose each element represents the value of a stock. I am sup
 - Attempt 1 worded out: I will first use a for loop and for every element, check if there exists a bigger value for a profit to exist and then store that profit in a variable, eventually I will see if the profit gets increased at the end of the iteration or not. If so, that's my final profit.
 
 ## Failed Attempts / Confusions
-- 
+- First brute force attempt: Time complexity O(n^2), checked if j - i was a bigger profit than the max profit and updated the max profit everytime it was. But time limit exceeds. Seems similar to last time as well.
+- Reminds me of the two sum problem but it's difference only that the difference now matters.
 
 ## Final Approach (In Words)
 - 
