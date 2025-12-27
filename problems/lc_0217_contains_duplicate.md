@@ -17,8 +17,20 @@ Given an array, check and see if there exists duplicate occurrences of a number.
 - Property: how to keep count of a single number without having to continuously check for its occurrences every time?
 
 ## Final Approach (In Words)
-- 
+- I use a set, which is similar to a hashmap the way I intend to use it. I keep track of unique numbers in it as a set cannot have duplicate and add numbers that I encounter for the first time.
+- I set the flag to true if I encounter a number that I've seen before. Otherwise the flag stays false.
 
 ## Code
 ```python
-# write final code here
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        flag = False
+        seen = set()
+        for i in nums:
+            # If element has already been seen
+            if i in seen:
+                flag = True
+            else:
+                seen.add(i)
+        
+        return flag
