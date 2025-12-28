@@ -12,6 +12,7 @@ I am given an array, and I should find the largest subarray whose sum gives me t
 - The brute force for this could be to just get all possible subarrays using slicing and seeing which one is the max.
 - Property: Need to find a way to avoid looking at every possible subarray which takes n^2 time
 - What if I started with the whole array and removed the smallest number and checked to see if the max number changed or not?
+- I feel this is some kind of sliding window problem, but I cannot think of how to find that approach, two pointers isn't the way..
 
 ## Failed Attempts / Confusions
 - I got the brute force working with a time complexity of O(N^2) where I check every possible slice (subarray) and compare to see if the sum obtained from the elements is max or not. Takes too much time. started with max sum being the first element value
