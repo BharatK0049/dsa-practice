@@ -5,7 +5,7 @@ LeetCode #53
 Greedy Single-Pass State Tracking (Kadane’s Algorithm)
 
 ## Problem Restatement
-I am given an array, and I should find the largest subarray whose sum gives me the highest possible value.
+I am given an array, and I should find the maximum sum of any contiguous subarray.
 
 ## Initial Thoughts (Before Coding)
 - Clearly, this means the array itself could be the largest if the sum of the elements is big.
