@@ -20,6 +20,8 @@ I am not allowed to use division so that rules out my initial thoughts. Must lea
 - Used two lists, one to remove the number itself and multiply every other element and another to store the final product, all this was done in O(N^2)
 - Property: Can I reduce having to perform multiplication of every other number when it's evident that I have to just multiply it all once and then remove that number?
 - Can't be using division since 0s exist and that would lead to zero division error.
+- I managed to solve it using division operator, a stupidly lengthy code and it worked.. but it was cheating. I even bypassed using power (-1) but that's division too. At least I know how to solve it this way. Now to actually solve the problem
+- 
 
 ## Final Approach (In Words)
 - 
