@@ -19,7 +19,7 @@ I am given a *sorted* array which has been rotated some number of times. Now in 
 ## Final Approach (In Words)
 - Did some jugaad and checked for cases where there were only two elements and the rightmost was the least and returned that. It accepted all 150 cases so we take that as a win
 - But that isn't how things are to be approached so I'll get the "legit" solution.
-- THe real solution: Start like how you normally would with binary search, have a left and right pointer, and while l <= r, calculate the middle. Here we check to see if the middle index's value is greater than right or not. If so, we move the left by one, i.e moving to the rightmost half which is sorted. Otherwise, we half the right to middle, staying in the leftmost. We return the leftmost index, i.e. when the left equals right.
+- THe real solution: Start like how you normally would with binary search, have a left and right pointer, and while l < r, calculate the middle. Here we check to see if the middle index's value is greater than right or not. If so, we move the left by one, i.e moving to the rightmost half which is sorted. Otherwise, we half the right to middle, staying in the leftmost. We return the leftmost index, i.e. when the left equals right.
 
 ## Code
 ```python
