@@ -2,7 +2,7 @@
 LeetCode #238
 
 ## Pattern
-Prefix Products + Suffix Products
+Prefix and Suffix Accumulation
 
 ## Problem Restatement
 Given an array with integers, I must return an array of the same size where each corresponding index has the product of the numbers in the input array except that number.
@@ -22,7 +22,7 @@ I am not allowed to use division so that rules out my initial thoughts. Must lea
 - Can't be using division since 0s exist and that would lead to zero division error.
 - I managed to solve it using division operator, a stupidly lengthy code and it worked.. but it was cheating. I even bypassed using power (-1) but that's division too. At least I know how to solve it this way. Now to actually solve the problem
 - answer[i] = (product of nums[0 … i-1]) × (product of nums[i+1 … n-1])
-- I figured the prefix and postfix multiplication but couldn't find a O(n) solution for it, relying on a nested loop to calculate postfix and prefix multiplication
+- I initially relied on nested loops to compute prefix and postfix products separately before realizing they can be accumulated in linear time.
 
 ## Final Approach (In Words)
 - Using one output array as space, I first use a for loop to update all the prefix products of the number by taking a prefix variable and storing the output_array's index value as that, followed by prefix multiplication.
