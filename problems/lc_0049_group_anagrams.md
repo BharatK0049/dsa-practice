@@ -1,4 +1,4 @@
-# Problem:
+# Problem: Group Anagrams
 LeetCode #49
 
 ## Pattern
@@ -9,7 +9,7 @@ I have a list of words, I must return a nested list, where each inner list must 
 
 ## Initial Thoughts (Before Coding)
 - God dayum. How on Earth am I achieving this
-- 
+- Already thinking of checking for edge cases like the list being empty or it just having a single word; feels like jugaad to me.
 - 
 
 ## Failed Attempts / Confusions
