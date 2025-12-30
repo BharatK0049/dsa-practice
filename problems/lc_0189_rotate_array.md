@@ -31,16 +31,19 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         k = k % len(nums)
+        # Reversing the whole array Eg: [7, 6, 5, 4, 3, 2, 1]
         l, r = 0, len(nums) - 1
         while l < r:
             nums[l], nums[r] = nums[r], nums[l]
             l, r = l + 1, r - 1
-        
+
+        # Reversing the first half upto k Eg: [5, 6, 7, 4, 3, 2, 1]
         l, r = 0, k - 1
         while l < r:
             nums[l], nums[r] = nums[r], nums[l]
             l, r = l + 1, r - 1
-        
+
+        # Reversing the second half from k to end Eg: [5, 6, 7, 1, 2, 3, 4]
         l, r = k, len(nums) - 1
         while l < r:
             nums[l], nums[r] = nums[r], nums[l]
