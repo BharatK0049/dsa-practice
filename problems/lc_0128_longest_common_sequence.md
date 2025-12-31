@@ -47,3 +47,4 @@ class Solution:
 ## Key Insights:
 - Sequence membership depends on value relationships, not iteration order.
 - A number can start the sequence if its predecessor does not exist.
+- The inner while loop does not make the algorithm O(n²) because each number in the set is visited at most once across all iterations.
