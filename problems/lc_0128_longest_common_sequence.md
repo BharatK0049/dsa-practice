@@ -2,7 +2,7 @@
 LeetCode #128
 
 ## Pattern
-Hashmaps 
+Hash Set + Start-of-Sequence Detection 
 
 ## Problem Restatement
 Given an array, I must check to see what's the longest sequence that can be made. The sequence does not need to be contiguous in the array, but the values must be consecutive integers.
@@ -20,11 +20,28 @@ Given an array, I must check to see what's the longest sequence that can be made
 - I struggled to define a single invariant that determines when a number should start a new sequence versus extend an existing one, which led to logic that depended too much on traversal order.
 
 ## Final Approach (In Words)
-- 
+- Instead of building sequences from every number, only consider numbers that have no predecessor, and expand forward to count the length of the sequence.
 
 ## Code
 ```python
-# write final code here
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+
+        num_un = set(nums) # Reference to all unique numbers in og list
+        longest = 0 # length of longest sequence
+
+        for num in num_un:
+            # If predecessor does not exist
+            if num - 1 not in num_un:
+                # Length of the sequence
+                length = 0
+                # Checking if the next consecutive number is in the set or not break when there does not exist a number
+                while (num + length) in num_un:
+                    length += 1
+                # Compare current length with other such lengths
+                longest = max(longest, length)
+        
+        return longest
 ```
 
 ## Key Insights:
