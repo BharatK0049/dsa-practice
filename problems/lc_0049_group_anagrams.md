@@ -11,7 +11,6 @@ I have a list of words, I must return a nested list, where each inner list must 
 - God dayum. How on Earth am I achieving this
 - Already thinking of checking for edge cases like the list being empty or it just having a single word; feels like jugaad to me.
 - From problem 242 - Valid Anagrams, I'll just take that function instead of coding it all over again, it's not cheating if I did it before (for now) for the raw solution.
-- 
 
 ## Failed Attempts / Confusions
 - I incorrectly used a set to track seen values, which caused duplicate words at different indices to be skipped even though grouping requires preserving all occurrences.
