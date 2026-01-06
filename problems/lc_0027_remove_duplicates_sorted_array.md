@@ -8,7 +8,7 @@ Two-pointers
 I have an array which is sorted but there exist some duplicate values. The goal is to remove them in-place (meaning you shouldn't use an additional array to remove them), but the key idea is to have the unique elements at the beginning of the array and it doesn't matter what comes later.
 
 ## Initial Thoughts (Before Coding)
-- 
+- Use an extra array and try to get the unique elements alone 
 - 
 - 
 
@@ -39,4 +39,5 @@ class Solution:
 
 ## Key Insights
 - Array must be sorted as well as the unique count must be returned.
-- 
+- When the element one less than the right pointer is not equal to that of the right pointer, then there is a unique value, so we count that and move left to where the right currently is.
+- Each time the left increases is also the number of unique elements in the array.
