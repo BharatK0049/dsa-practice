@@ -2,7 +2,7 @@
 LeetCode #238
 
 ## Pattern
-Prefix and Suffix Accumulation
+Prefix and Suffix Accumulation (Prefix Sum type)
 
 ## Problem Restatement
 Given an array with integers, I must return an array of the same size where each corresponding index has the product of the numbers in the input array except that number.
