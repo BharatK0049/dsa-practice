@@ -37,7 +37,7 @@ class Solution:
                 # If inner loop has run successfully i.e. all letter have matched in that window
                 if j == len(needle) - 1:
                     return i
-            # When substring does not match
+        # When substring does not match
         return -1
 ```
 
