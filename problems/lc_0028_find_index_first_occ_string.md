@@ -2,7 +2,7 @@
 LeetCode #28
 
 ## Pattern
--
+Substring Search (Naive)
 
 ## Problem Restatement
 Given a string (haystack) and a needle (smaller string), find the first occurence in the string. Like the substring if I must put it that way.
@@ -18,13 +18,32 @@ Given a string (haystack) and a needle (smaller string), find the first occurenc
 - Recognized this to be a sliding window variation of two pointers and assigned right pointer as len(needle) - 1. Moved l and r by 1 when either of the case wasn't satisfied
 
 ## Final Approach (In Words)
-- 
+- Using a brute force O(m * n) approach to loop through the haystack's length - the needle's length + 1 to save needle length's spaces left that can be checked by the inner loop to avoid any out of index errors.
+- Within the inner loop, check to see if the haystack's index of i+j matches the needle's j index and break if there's if it doesn't match. Move to next i.
+- If inner loop has been completed successfully with no breaks, return the corresponding ith index as index of first occurrrence.
+- Return -1 for no matches.
 
 ## Code
 ```python
-# write final code here
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        # Looping through 0 to the last index where there is len(needle) - 1 characters left 
+        for i in range(len(haystack) - len(needle) + 1):
+            # Inner window to see if the substring letters all match from the starting point of i
+            for j in range(len(needle)):
+                # If where we start from i to j letters forth (substring length) doesn't match the letters in needle, then we move to the next ith index
+                if haystack[i+j] != needle[j]:
+                    break
+                # If inner loop has run successfully i.e. all letter have matched in that window
+                if j == len(needle) - 1:
+                    return i
+            # When substring does not match
+        return -1
 ```
 
 ## Key Insights
-- In a sliding window problem, both pointers move at the same time. (this is not exactly a sliding window problem, at least not with two pointers)
-- 
+- This problem checks every possible fixed-length window of size `m` in the haystack.
+- No partial match allows safe skipping of future windows, so every alignment must be verified.
+- The inner loop validates a single alignment character-by-character and exits early on mismatch.
+- The outer loop only runs until `n - m + 1` to avoid out-of-bounds access.
+
