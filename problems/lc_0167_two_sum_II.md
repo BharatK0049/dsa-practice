@@ -8,23 +8,44 @@ LeetCode #167
 Similar to two sum, there are two integers that add up to the final target solution, only that the given array is in non decreasing order, elements sorted.
 
 ## Initial Thoughts (Before Coding)
-- How does brute force play out differently? It's still the same.
-- What is the actual challenge expected here, how is this different from the solution of two pointers 1?
-- Just reproduce two pointers, reverse the array of the indices and add one
+- Brute force remains `O(n²)` and is not acceptable.
+- A hashmap solution works in `O(n)` time but uses `O(n)` extra space.
+- Since the array is sorted, there must be a way to exploit ordering and avoid extra space.
+- Recalled the two-pointer technique used in merge-style problems.
 
 ## Failed Attempts / Confusions
-- brute force takes too much time
-- One solution is to just take og two sum and modify answer but space complexity is O(N).
-- Two pointer approach where left is at beginning and right is at end; if target -  left is less than right, increase left otherwise if target - right  is less than left, decrease right
+- Reused the Two Sum I hashmap approach, which worked but ignored the sorted constraint.
+- Implemented a two-pointer approach but forgot to explicitly handle the equality case.
+- Assumed Python would “implicitly” return when neither `<` nor `>` condition was met.
+- Learned that control flow must explicitly encode the termination condition.
 
 ## Final Approach (In Words)
-- 
+- Place one pointer at the start (`l`) and one at the end (`r`) of the array.
+- While `l < r`:
+  - If the sum is greater than the target, decrement `r` to reduce the sum.
+  - If the sum is less than the target, increment `l` to increase the sum.
+  - Otherwise, the sum equals the target — return the 1-based indices immediately.
+- This works because the sorted order guarantees that pointer movements monotonically eliminate impossible pairs.
 
 ## Code
 ```python
-# write final code here
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        l = 0
+        r = len(numbers) - 1
+
+        while l < r:
+            
+            if numbers[l] + numbers[r] > target:
+                r -= 1
+            elif numbers[l] + numbers[r] < target:
+                l += 1
+            else:
+                return [l+1, r+1]
 ```
 
 ## Key Insights
-- 
-- 
+- Sorted input is a strong signal that a two-pointer elimination strategy exists.
+- The equality case (sum == target) must be handled explicitly; Python does not infer it.
+- Two Sum II improves upon Two Sum I by reducing space complexity from O(n) to O(1).
+- When exactly one solution is guaranteed, encountering it should immediately terminate the algorithm.
