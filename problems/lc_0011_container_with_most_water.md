@@ -2,7 +2,7 @@
 LeetCode #11
 
 ## Pattern
-(What pattern does this belong to?)
+Two Pointers (greedy)
 
 ## Problem Restatement
 Given an array of heights of water of various lengths, find the maximum area that can be formed between two of the lengths.  
