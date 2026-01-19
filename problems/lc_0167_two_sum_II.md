@@ -2,7 +2,7 @@
 LeetCode #167
 
 ## Pattern
-(What pattern does this belong to?)
+Two Pointers
 
 ## Problem Restatement
 Similar to two sum, there are two integers that add up to the final target solution, only that the given array is in non decreasing order, elements sorted.
