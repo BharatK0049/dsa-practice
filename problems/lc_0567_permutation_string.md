@@ -10,7 +10,6 @@ Given two strings s1 and s2, determine whether any substring of s2 with length l
 ## Initial Thoughts (Before Coding)
 - Okay, so clearly, it's not asking to look for the letters in the string, nor is it asking if the exact substring exists in that string.
 - The brute force for this would be to use a helper function to generate all possible permutations of this substring and see if that substring exists in the string.
-- 
 
 ## Failed Attempts / Confusions
 - Realized that brute force would lead to Time exceeded due to permutation function taking n!/(n-r)!, not to mention calling this helper function to check if this exists in the string, so something like n * n! complexity!!!
